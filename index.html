@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Dino Game</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 2px solid black; }
+    </style>
+</head>
+<body>
+    <h1>Chrome Dino Game</h1>
+    <canvas id="gameCanvas" width="800" height="300"></canvas>
+    <p>Press SPACE to jump!</p>
+    <p id="score">Score: Loading...</p>
+
+    <script>
+        // Fetch score from Flask backend
+        <script>
+    fetch("http://127.0.0.1:5000/score")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("score").innerText = "Score: " + data.score;
+        })
+        .catch(error => console.error("Error fetching score:", error));
+</script>
+</body>
+</html>
